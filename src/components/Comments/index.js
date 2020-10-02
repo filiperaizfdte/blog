@@ -8,7 +8,7 @@ const Comments = ({ url, title }) => {
 	const completeURL = `https://willianjusten.com.br${url}`
 
 	return (
-		<S.CommentsWrapper>
+		<S.CommentsWrapper className={className}>
 			<S.CommentsTitle>Comentários</S.CommentsTitle>
 			<ReactDisqusComments
 				shortname="willianjusten"
@@ -23,6 +23,10 @@ const Comments = ({ url, title }) => {
 Comments.propTypes = {
 	url: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
+}
+
+Comments.defaultProps = {
+  className: "box-comments" 
 }
 
 export default Comments
